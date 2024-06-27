@@ -1,0 +1,3 @@
+portfolio/theme/apps.py text eol=lf
+portfolio/theme/static/css/dist/styles.css text eol=lf
+portfolio/theme/templates/base.html text eol=lf
