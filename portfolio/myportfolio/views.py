@@ -9,10 +9,7 @@ def about(request):
     return render(request, 'myportfolio/about.html')
 
 def projects(request):
-    return render(request, 'myportfolio/projects.html')
-
-def stats(request):
-    return render(request, 'myportfolio/stats.html')
+    return render(request, 'myportfolio/projects.html') 
 
 def contact(request):
     return render(request, 'myportfolio/contact.html')
