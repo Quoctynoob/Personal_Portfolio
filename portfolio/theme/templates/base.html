@@ -7,7 +7,6 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		{% tailwind_css %}
 		<script>
-			// Immediately apply the theme to avoid flickering
 			(function() {
 				const currentTheme = localStorage.getItem('theme');
 				if (currentTheme) {
@@ -15,33 +14,31 @@
 				}
 			})();
 		</script>
-	
-		<script src="{% static 'js/main.js' %}" defer></script>
 	</head>
 
-	<body class="transition-colors duration-500 bg-white dark:bg-gray-900 text-black dark:text-white">
-		<div class="bg-gray-800 p-4">
+	<body class="transition-colors duration-500 bg-neutral-100 dark:bg-gray-900 text-black dark:text-white">
+		<div class="bg-neutral-100 dark:bg-gray-900 p-4 transition-colors duration-500">
 			<div class="container mx-auto flex justify-between items-center">
 				<nav class="flex">
-					<a href="{% url 'home' %}" class="text-white px-4 py-2">Quoc Le</a>
-					<a href="{% url 'about' %}" class="text-white px-4 py-2">About</a>
-					<a href="{% url 'projects' %}" class="text-white px-4 py-2">Projects</a>
-					<a href="{% url 'contact' %}" class="text-white px-4 py-2">Contact</a>
+					<a href="{% url 'home' %}" class="text-black dark:text-white px-4 py-2">Quoc Le</a>
+					<a href="{% url 'about' %}" class="text-black dark:text-white px-4 py-2">About</a>
+					<a href="{% url 'projects' %}" class="text-black dark:text-white px-4 py-2">Projects</a>
+					<a href="{% url 'contact' %}" class="text-black dark:text-white px-4 py-2">Contact</a>
 				</nav>
 				<div class="flex items-center">
-					<a href="www.linkedin.com/in/quoc-van-tilburg-le-293333294" class="text-white px-4 py-2">
+					<a href="www.linkedin.com/in/quoc-van-tilburg-le-293333294" class="text-black dark:text-white px-4 py-2">
 						<ion-icon name="logo-linkedin"></ion-icon>
 					</a>
-					<a href="https://github.com/Quoctynoob" class="text-white px-4 py-2">
+					<a href="https://github.com/Quoctynoob" class="text-black dark:text-white px-4 py-2">
 						<ion-icon name="logo-github"></ion-icon>
 					</a>
-					<a href="https://www.instagram.com/tilburgquoc/" class="text-white px-4 py-2">
+					<a href="https://www.instagram.com/tilburgquoc/" class="text-black dark:text-white px-4 py-2">
 						<ion-icon name="logo-instagram"></ion-icon>
 					</a>
-					<a href="mailto:tilburgquoc34@gmail.com" class="text-white px-4 py-2">
+					<a href="mailto:tilburgquoc34@gmail.com" class="text-black dark:text-white px-4 py-2">
 						<ion-icon name="at-outline"></ion-icon>
 					</a>
-					<button id="theme-toggle" class="text-white px-3 py-2">
+					<button id="theme-toggle" class="text-black dark:text-white px-3 py-2">
 						<span id="light-mode-icon" class="hidden">
 							<ion-icon name="sunny-outline"></ion-icon>
 						</span>
@@ -54,6 +51,8 @@
 		</div>
 		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script src="{% static 'js/main.js' %}" defer></script>
+		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 		{% block content %}{% endblock %}
 	</body>
 </html>
