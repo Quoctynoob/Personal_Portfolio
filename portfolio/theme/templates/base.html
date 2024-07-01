@@ -16,8 +16,8 @@
 		</script>
 	</head>
 
-	<body class="transition-colors duration-500 bg-neutral-100 dark:bg-gray-900 text-black dark:text-white">
-		<div class="bg-neutral-100 dark:bg-gray-900 p-4 transition-colors duration-500">
+	<body class="transition-colors duration-500 bg-mintCream dark:bg-darkMint text-black dark:text-white">
+		<div class="bg-mintCream dark:bg-darkMint p-4 transition-colors duration-500">
 			<div class="container mx-auto flex justify-between items-center">
 				<nav class="flex">
 					<a href="{% url 'home' %}" class="text-black dark:text-white px-4 py-2">Quoc Le</a>
@@ -49,10 +49,62 @@
 				</div>
 			</div>
 		</div>
+		<script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>   
 		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-		<script src="{% static 'js/main.js' %}" defer></script>
 		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+		<script src="{% static 'js/main.js' %}"></script>
+		<script>
+			document.addEventListener('alpine:init', () => {
+				Alpine.data('skillDisplay', () => ({
+					skills: [{
+							'title': 'HTML + CSS',
+							'percent': '75',
+						},
+						{
+							'title': 'Java',
+							'percent': '75',
+						},
+						{
+							'title': 'Python',
+							'percent': '75',
+						},
+						{
+							'title': 'JavaScript',
+							'percent': '70',
+						},
+						{
+							'title': 'SQL',
+							'percent': '80',
+						}, {
+							'title': 'C',
+							'percent': '65',
+						},
+					],
+					currentSkill: {
+						'title': 'HTML + CSS',
+						'percent': '75',
+					}
+				}));
+			});
+		</script>
+		<script>
+			function calculateAge() {
+				const divisor = 1000 * 60 * 60 * 24 * 365.2421897; // ms in an average year
+				const birthTime = new Date('2004-12-07T00:00:00');
+				const ageElement = document.getElementById('age');
+				
+				function updateAge() {
+					const age = ((Date.now() - birthTime) / divisor).toFixed(11);
+					ageElement.textContent = age;
+				}
+	
+				setInterval(updateAge, 25); // Update age every 25 ms
+			}
+	
+			// Wait for the DOM to fully load before running the script
+			document.addEventListener('DOMContentLoaded', calculateAge);
+		</script>
 		{% block content %}{% endblock %}
 	</body>
 </html>

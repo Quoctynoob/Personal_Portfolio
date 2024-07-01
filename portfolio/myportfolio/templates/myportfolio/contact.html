@@ -1,26 +1,39 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="ml-56 mr-56">
-    <section class="bg-white dark:bg-gray-900 transition-colors duration-500">
-        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Get In Touch</h2>
-            <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-                Contact me through social media or email.
-            </p>
-            <form action="https://getform.io/f/pbnvvwyb" method="POST" class="space-y-8">
-                <input class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" 
-                type="text" name="name" placeholder="Your Name">
-                <input class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" 
-                type="email" name="email" placeholder="Your email">
-                <textarea class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 sm:col-span-2" type="text" name="message" placeholder="Hello there!" rows="4"></textarea>
-                <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800" 
-                type="submit">
-                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                        Say Hello
-                    </span>
-                </button>
-            </form>
+    <div class=" transition-colors duration-500 grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 bg-neutral-200 dark:bg-gray-800 text-white">
+        <div class="flex flex-col justify-between">
+            <div class="space-y-2">
+                <h2 class="text-4xl font-bold leading-tight lg:text-5xl text-black dark:text-white">Get In Touch</h2>
+                <div class="text-black dark:text-white">Contact me through social media or email.</div>
+                <a href="https://github.com/Quoctynoob" class="flex items-center text-black dark:text-white hover:text-white hover:bg-slate-600 rounded p-2">
+                    <ion-icon fill="currentColor" class="w-6 h-6 m-2" viewBox="0 0 24 24" name="logo-github"></ion-icon>
+                    Github
+                </a>
+                <a href="www.linkedin.com/in/quoc-van-tilburg-le-293333294" class="flex items-center text-black dark:text-white hover:text-white hover:bg-slate-600 rounded p-2">
+                    <ion-icon fill="currentColor" class="w-6 h-6 m-2" viewBox="0 0 24 24" name="logo-linkedin"></ion-icon>
+                    Linkedin
+                </a>
+                <a href="https://www.instagram.com/tilburgquoc/" class="flex items-center text-black dark:text-white hover:text-white hover:bg-slate-600 rounded p-2">
+                    <ion-icon fill="currentColor" class="w-6 h-6 m-2" viewBox="0 0 24 24" name="logo-instagram"></ion-icon>
+                    Instagram
+                    
+                </a>
+            </div>
         </div>
-      </section>
+        <form action="https://getform.io/f/pbnvvwyb" method="POST" class="space-y-8">
+            <input class="transition-colors duration-500 block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" 
+            type="text" name="name" placeholder="Your Name">
+            <input class="transition-colors duration-500 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" 
+            type="email" name="email" placeholder="Your email">
+            <textarea class="transition-colors duration-500 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 sm:col-span-2" type="text" name="message" placeholder="Hello there!" rows="4"></textarea>
+            <button class="transition-colors duration-500 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br dark:from-green-400 dark:to-blue-600 dark:group-hover:from-green-400 dark:group-hover:to-blue-600 dark:hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800" 
+            type="submit">
+                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    Say Hello!
+                </span>
+            </button>
+        </form>
+    </div>
 </div>
 {% endblock %}
